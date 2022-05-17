@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "94607620275",
+    "project_id": "mobilkiralama-7f208",
+    "storage_bucket": "mobilkiralama-7f208.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94607620275:android:6549ac9f56ba33fee698c6",
+        "android_client_info": {
+          "package_name": "com.mrtrz.mobilkiralama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94607620275-ogqjfdplthji0b605fkv55630e4uc799.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjUiWFaAMMaJR_L5yBSnRH5J-YhHDdOjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94607620275-ogqjfdplthji0b605fkv55630e4uc799.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

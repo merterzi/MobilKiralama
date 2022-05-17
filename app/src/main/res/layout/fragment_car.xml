@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarFragment"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yeni İlan Ekle"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:padding="5dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marka Seçiniz"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
+            <Spinner
+                android:id="@+id/markaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/modelYiliEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Model yılı giriniz"
+                android:padding="10dp"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/kmEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kilometre giriniz"
+                android:padding="10dp"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/motorGücüEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Motor gücünü giriniz"
+                android:padding="10dp"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/motorHacmiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Motor hacmini giriniz"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yakıt Tipini Seçiniz"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
+            <Spinner
+                android:id="@+id/yakitSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/fiyatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Fiyat giriniz"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/aciklamaEditTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:hint="Açıklama"
+                android:inputType="textMultiLine" />
+
+            <ImageView
+                android:id="@+id/arabaImageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:src="@drawable/kiralama1" />
+
+            <Button
+                android:id="@+id/ilanEkleButton"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:text="İlan Ekle"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

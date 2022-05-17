@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAdvertActivity"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/konutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToHouse"
+        android:text="Konut İlanı Ekle" />
+
+    <Button
+        android:id="@+id/arabaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToCar"
+        android:text="Araba İlanı Ekle" />
+
+    <Button
+        android:id="@+id/dukkanButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToShop"
+        android:text="Dükkan İlanı Ekle" />
+
+    <LinearLayout
+        android:id="@+id/frgament_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+
+</LinearLayout>
+
+

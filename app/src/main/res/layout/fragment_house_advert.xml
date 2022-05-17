@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HouseAdvertFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/houseFiltreleButton"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="Filtrele"
+            android:layout_margin="5dp"/>
+
+
+        <Button
+            android:id="@+id/houseSiralamaButton"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="Sıralama" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/houseSiralamaSecenekleri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/houseFiyatAzalanRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fiyata göre azalan" />
+
+            <RadioButton
+                android:id="@+id/houseFiyatArtanRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fiyata göre artan" />
+
+            <RadioButton
+                android:id="@+id/houseTarihEskiRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarihe göre önce  en eski ilan" />
+
+            <RadioButton
+                android:id="@+id/houseTarihYeniRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarihe göre önce en yeni ilan" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/filtrelemeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Bina Yaşı : "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enAzYasText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Az" />
+
+            <EditText
+                android:id="@+id/enFazlaYasText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Fazla" />
+
+            <Button
+                android:id="@+id/yasAraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ara" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Fiyat : "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enAzFiyatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Az" />
+
+            <EditText
+                android:id="@+id/enFazlaFiyatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Fazla" />
+
+            <Button
+                android:id="@+id/fiyatAraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ara" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Kat : "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enAzKatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Az" />
+
+            <EditText
+                android:id="@+id/enFazlaKatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Fazla" />
+
+            <Button
+                android:id="@+id/katAraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ara" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Metrekare : "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/enAzMetrekareText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Az" />
+
+            <EditText
+                android:id="@+id/enFazlaMetrekareText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="En Fazla" />
+
+            <Button
+                android:id="@+id/metrekareAraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ara" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/filtreleriTemizleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Filtreleri Temizle" />
+
+    </LinearLayout>
+</LinearLayout>

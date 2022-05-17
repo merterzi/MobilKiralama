@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopFragment"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yeni İlan Ekle"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:padding="5dp"/>
+
+
+            <EditText
+                android:id="@+id/metrekareEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Metrekare giriniz"
+                android:padding="10dp"
+                android:layout_margin="10dp"/>
+
+
+            <EditText
+                android:id="@+id/binaYasiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Bina yaşını giriniz"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/fiyatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Fiyat giriniz"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/aciklamaEditTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:hint="Açıklama"
+                android:inputType="textMultiLine" />
+
+            <ImageView
+                android:id="@+id/dukkanImageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:src="@drawable/kiralama1" />
+
+            <Button
+                android:id="@+id/ilanEkleButton"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:text="İlan Ekle"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
