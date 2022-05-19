@@ -1,11 +1,16 @@
 package com.mrtrz.mobilkiralama;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -76,6 +81,45 @@ public class SavedAdvertsActivity extends AppCompatActivity {
         binding.kayitliDukkanRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         shopAdapter = new ShopAdapter(shopArrayList);
         binding.kayitliDukkanRecyclerView.setAdapter(shopAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.option_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.ilan_ekle){
+            Intent intentToAddAdvert = new Intent(SavedAdvertsActivity.this, AddAdvertActivity.class);
+            startActivity(intentToAddAdvert);
+        }
+        else if(item.getItemId() == R.id.anasayfa){
+            Intent intentToAnasayfa = new Intent(SavedAdvertsActivity.this, AnasayfaActivity.class);
+            startActivity(intentToAnasayfa);
+        }
+        else if(item.getItemId() == R.id.profil){
+            Intent intentToProfil = new Intent(SavedAdvertsActivity.this, ProfilActivity.class);
+            startActivity(intentToProfil);
+        }
+        else if(item.getItemId() == R.id.kaydedilen_ilanlar){
+            Intent intentToSavedAdverts = new Intent(SavedAdvertsActivity.this, SavedAdvertsActivity.class);
+            startActivity(intentToSavedAdverts);
+        }
+        else if(item.getItemId() == R.id.cikis_yap){
+            auth.signOut();
+
+            Intent intentToSignOut = new Intent(SavedAdvertsActivity.this, MainActivity.class);
+            startActivity(intentToSignOut);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void getSavedHouseAdverts(){

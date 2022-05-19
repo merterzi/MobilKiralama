@@ -118,6 +118,7 @@ public class ShopFragment extends Fragment {
                             long binaYasi = Long.parseLong(binding.binaYasiEditText.getText().toString());
                             long fiyat = Long.parseLong(binding.fiyatEditText.getText().toString());
                             String aciklama = binding.aciklamaEditTextTextMultiLine.getText().toString();
+                            String keyWord = binding.keyWordEditText.getText().toString();
                             FirebaseUser user = auth.getCurrentUser();
                             String email = user.getEmail();
 
@@ -127,6 +128,7 @@ public class ShopFragment extends Fragment {
                             advertData.put("binayasi", binaYasi);
                             advertData.put("fiyat", fiyat);
                             advertData.put("aciklama", aciklama);
+                            advertData.put("keyWord", keyWord);
                             advertData.put("email", email);
                             advertData.put("tarih", FieldValue.serverTimestamp());
 

@@ -7,23 +7,12 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonKayitsiz"
-        android:layout_width="199dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="50dp"
-        android:onClick="kayitsiz"
-        android:text="Kayıt Olmadan Devam Et"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGirisKayit" />
-
-    <Button
         android:id="@+id/buttonGirisKayit"
         android:layout_width="199dp"
         android:layout_height="57dp"
-        android:layout_marginTop="30dp"
         android:onClick="girisKayit"
         android:text="Giriş Yap/Üye Ol"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -33,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="350dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kiralama1" />

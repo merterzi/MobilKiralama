@@ -130,6 +130,7 @@ public class HouseFragment extends Fragment {
                             String tapuDurumu = binding.tapuSpinner.getSelectedItem().toString();
                             Long fiyat = Long.parseLong(binding.fiyatEditText.getText().toString());
                             String aciklama = binding.aciklamaEditTextTextMultiLine.getText().toString();
+                            String keyWord = binding.keyWordEditText.getText().toString();
                             FirebaseUser user = auth.getCurrentUser();
                             String email = user.getEmail();
 
@@ -143,6 +144,7 @@ public class HouseFragment extends Fragment {
                             advertData.put("tapu", tapuDurumu);
                             advertData.put("fiyat", fiyat);
                             advertData.put("aciklama", aciklama);
+                            advertData.put("keyword", keyWord);
                             advertData.put("tarih", FieldValue.serverTimestamp());
 
                             firestore.collection("Houses").add(advertData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

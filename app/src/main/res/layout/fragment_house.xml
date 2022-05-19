@@ -93,6 +93,14 @@
                 android:hint="Açıklama"
                 android:inputType="textMultiLine" />
 
+            <EditText
+                android:id="@+id/keyWordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="İlana ait anahtar kelime giriniz"
+                android:padding="10dp" />
+
             <ImageView
                 android:id="@+id/konutImageView"
                 android:layout_width="match_parent"

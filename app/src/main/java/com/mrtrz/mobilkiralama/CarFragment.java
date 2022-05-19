@@ -132,6 +132,7 @@ public class CarFragment extends Fragment {
                             String yakit = binding.yakitSpinner.getSelectedItem().toString();
                             long fiyat = Long.parseLong(binding.fiyatEditText.getText().toString());
                             String aciklama = binding.aciklamaEditTextTextMultiLine.getText().toString();
+                            String keyWord = binding.keyWordEditText.getText().toString();
                             FirebaseUser user = auth.getCurrentUser();
                             String email = user.getEmail();
 
@@ -145,6 +146,7 @@ public class CarFragment extends Fragment {
                             advertData.put("yakit", yakit);
                             advertData.put("fiyat", fiyat);
                             advertData.put("aciklama", aciklama);
+                            advertData.put("keyword", keyWord);
                             advertData.put("tarih", FieldValue.serverTimestamp());
                             advertData.put("email", email);
 

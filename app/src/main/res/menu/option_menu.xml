@@ -3,7 +3,6 @@
     <item android:id="@+id/anasayfa" android:title="Anasayfa"></item>
     <item android:id="@+id/ilan_ekle" android:title="İlan Ekle"></item>
     <item android:id="@+id/kaydedilen_ilanlar" android:title="Kaydedilen İlanlar"></item>
-    <item android:id="@+id/karsilastirma" android:title="Karşılaştırma"></item>
     <item android:id="@+id/profil" android:title="Profil"></item>
     <item android:id="@+id/cikis_yap" android:title="Çıkış Yap"></item>
 </menu>

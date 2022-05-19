@@ -1,5 +1,7 @@
 package com.mrtrz.mobilkiralama.model;
 
+import java.util.ArrayList;
+
 public class House implements Entity{
     public String documentId;
     public String downloadUrl;

@@ -1,11 +1,16 @@
 package com.mrtrz.mobilkiralama;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Binder;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -74,9 +79,45 @@ public class ProfilActivity extends AppCompatActivity {
         binding.profilDukkanRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         shopAdapter = new ShopAdapter(shopArrayList);
         binding.profilDukkanRecyclerView.setAdapter(shopAdapter);
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.option_menu, menu);
 
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.ilan_ekle){
+            Intent intentToAddAdvert = new Intent(ProfilActivity.this, AddAdvertActivity.class);
+            startActivity(intentToAddAdvert);
+        }
+        else if(item.getItemId() == R.id.anasayfa){
+            Intent intentToAnasayfa = new Intent(ProfilActivity.this, AnasayfaActivity.class);
+            startActivity(intentToAnasayfa);
+        }
+        else if(item.getItemId() == R.id.profil){
+            Intent intentToProfil = new Intent(ProfilActivity.this, ProfilActivity.class);
+            startActivity(intentToProfil);
+        }
+        else if(item.getItemId() == R.id.kaydedilen_ilanlar){
+            Intent intentToSavedAdverts = new Intent(ProfilActivity.this, SavedAdvertsActivity.class);
+            startActivity(intentToSavedAdverts);
+        }
+        else if(item.getItemId() == R.id.cikis_yap){
+            auth.signOut();
+
+            Intent intentToSignOut = new Intent(ProfilActivity.this, MainActivity.class);
+            startActivity(intentToSignOut);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void getUserData(){
